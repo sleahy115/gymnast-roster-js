@@ -1,23 +1,30 @@
+<div class="well">
+
 <h2>Add new gymnast to roster</h2>
 <form>
   <label>Name</label>
-  <input #newName>
+  <input #newName class="form-control"><br>
   <label>Career best score on bars</label>
-  <input #newBars>
+  <input #newBars class="form-control"><br>
   <label for="career-high-beam">Career best score on beam</label>
-  <input #newBeam>
+  <input #newBeam class="form-control"><br>
   <label>Career best score on floor</label>
-  <input #newFloor>
+  <input #newFloor class="form-control"><br>
   <label>Career best score on vault</label>
-  <input #newVault>
+  <input #newVault class="form-control"><br>
   <label>Level</label>
-  <input #newLevel>
+  <input #newLevel class="form-control"><br>
   <label>Status</label>
-  <input #newStatus>
+  <select #newStatus class="form-control">
+    <option value="active">Active</option>
+    <option value="inactive">inactive</option>
+    <option value="injured">injured</option>
+  </select><br>
   <label>Events</label>
-  <input #newEvents>
-  <button (click)="submitNewGymnast(newName.value, newBars.value, newBeam.value, newFloor.value, newVault.value, newLevel.value, newStatus.value, newEvents.value)">Add</button>
+  <input #newEvents class="form-control"><br>
+  <button (click)="submitNewGymnast(newName.value, newLevel.value, newEvents.value, newBeam.value, newBars.value, newFloor.value, newVault.value, newStatus.value)">Add</button>
 </form>
+</div>
 <app-team-list></app-team-list>
 
 

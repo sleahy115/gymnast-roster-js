@@ -1,20 +1,22 @@
-<form *ngIf="selectedGymnast">
+<div class="well" id="well" *ngIf="selectedGymnast">
+<form>
   <h2>Edit Gymnast</h2>
   <label>Name</label>
-  <input name="name" [(ngModel)]="selectedGymnast.name">
+  <input name="name" [(ngModel)]="selectedGymnast.name" class="form-control">
   <label>Career best score on bars</label>
-  <input name="bars" [(ngModel)]="selectedGymnast.careerHighBars">
+  <input name="bars" [(ngModel)]="selectedGymnast.careerHighBars" class="form-control">
   <label>Career best score on beam</label>
-  <input name="beam" [(ngModel)]="selectedGymnast.careerHighBeam">
+  <input name="beam" [(ngModel)]="selectedGymnast.careerHighBeam" class="form-control">
   <label>Career best score on floor</label>
-  <input name="floor" [(ngModel)]="selectedGymnast.careerHighFloor">
+  <input name="floor" [(ngModel)]="selectedGymnast.careerHighFloor" class="form-control">
   <label>Career best score on vault</label>
-  <input name="vault" [(ngModel)]="selectedGymnast.careerHighVault">
+  <input name="vault" [(ngModel)]="selectedGymnast.careerHighVault" class="form-control">
   <label>Level</label>
-  <input name="level" [(ngModel)]="selectedGymnast.level">
+  <input name="level" [(ngModel)]="selectedGymnast.level" class="form-control">
   <label>Status</label>
-  <input name="status" [(ngModel)]="selectedGymnast.status">
+  <input name="status" [(ngModel)]="selectedGymnast.status" class="form-control">
   <label>Events</label>
-  <input name="events" [(ngModel)]="selectedGymnast.events">
+  <input name="events" [(ngModel)]="selectedGymnast.events" class="form-control">
   <button (click)="editGymnast()">Edit</button>
 </form>
+</div>

@@ -14,6 +14,7 @@ export class StatusSortPipe implements PipeTransform {
       console.log(status)
       var output=[];
       for(var i=0; i<input.length;i++){
+        console.log(input[i].status);
         if(input[i].status === status){
           output.push(input[i]);
         }
