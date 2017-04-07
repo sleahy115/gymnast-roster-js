@@ -29,4 +29,9 @@ export class GymnastService {
     entry.update(gymnast);
   }
 
+  delete(gymnast){
+    var entry = this.getGymnastById(gymnast.$key);
+    entry.remove();
+  }
+
 }

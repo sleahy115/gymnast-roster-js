@@ -37,5 +37,10 @@ export class TeamListComponent implements OnInit {
   editGymnast(gymnast){
     this.GymnastService.editGymnast(gymnast);
   }
+  delete(gymnast){
+    if(confirm("Are you sure you would like to delete this gymnast?")){
+      this.GymnastService.delete(gymnast);
+    }
+  }
 
 }
