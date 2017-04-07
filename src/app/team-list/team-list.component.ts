@@ -13,12 +13,19 @@ import { Gymnast } from '../gymnast.model';
 })
 
 export class TeamListComponent implements OnInit {
-  gymnasts: FirebaseListObservable<any[]>;
+  gymnasts;
 
-  constructor(private Router:Router, public gymnastService:GymnastService) { }
+
+  constructor(private router:Router, private GymnastService:GymnastService) { }
 
   ngOnInit() {
-    this.gymnasts = this.gymnastService.getGymnasts();
+    this.GymnastService.getGymnasts().subscribe(snap => {
+      this.gymnasts = snap;
+    });
+  }
+
+  goToProfile(clickedGymnast:Gymnast) {
+    this.router.navigate(['gymnasts', clickedGymnast.id]);
   }
 
 }

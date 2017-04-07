@@ -1,4 +1,4 @@
 <p>
   team-list works!
 </p>
-<li *ngFor="let gymnast of gymnasts | async"> {{gymnast.name}} </li>
+<li *ngFor="let gymnast of gymnasts" (click)="goToProfile(gymnast)"> {{gymnast.name}}</li>

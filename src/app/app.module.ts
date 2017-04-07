@@ -7,6 +7,7 @@ import { TeamListComponent } from './team-list/team-list.component';
 import { routing } from './app.routing';
 import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
+import { GymnastProfileComponent } from './gymnast-profile/gymnast-profile.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -18,7 +19,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    TeamListComponent
+    TeamListComponent,
+    GymnastProfileComponent
   ],
   imports: [
     BrowserModule,
