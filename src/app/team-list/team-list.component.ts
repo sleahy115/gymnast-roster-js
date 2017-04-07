@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { GymnastService } from '../gymnast.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Gymnast } from '../gymnast.model';
+import { StatusSortPipe } from '../status-sort.pipe';
 
 
 @Component({
@@ -16,6 +17,7 @@ export class TeamListComponent implements OnInit {
   gymnasts;
   currentRoute:string = this.router.url;
   selectedGymnast = false;
+  status="all";
 
   constructor(private router:Router, private GymnastService:GymnastService) { }
 

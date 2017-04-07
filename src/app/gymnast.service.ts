@@ -16,7 +16,7 @@ export class GymnastService {
   }
 
   getGymnastById(key) {
-    console.log(this.angularFire.database.object('gymnasts/'+key));
+    console.log(key);
     return this.angularFire.database.object('gymnasts/'+ key);
   }
 

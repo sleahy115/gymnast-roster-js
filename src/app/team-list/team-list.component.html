@@ -1,4 +1,12 @@
-<div *ngFor="let gymnast of gymnasts">
+<h3>Sort by status</h3>
+<select #searchStatus (change)="status = searchStatus.value">
+  <option value="all">all</option>
+  <option value="active">Active</option>
+  <option value="inactive">inactive</option>
+  <option value="injured">injured</option>
+</select>
+
+<div *ngFor="let gymnast of gymnasts | statusSort:status">
   <li (click)="goToProfile(gymnast)"> {{gymnast.name}}</li>
   <div *ngIf="currentRoute === '/admin'">
     {{gymnast.name}}

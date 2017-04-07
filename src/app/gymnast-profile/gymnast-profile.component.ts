@@ -11,18 +11,20 @@ import { GymnastService } from '../gymnast.service';
   providers: [GymnastService]
 })
 export class GymnastProfileComponent implements OnInit {
-  gymnastId: number = null;
+  gymnastId;
   gymnast:Gymnast;
 
   constructor(private route:ActivatedRoute, private location: Location, private gymnastService:GymnastService) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-      this.gymnastId = parseInt(urlParameters['id']);
+      this.gymnastId = urlParameters['id'];
+      console.log(this.gymnastId);
     });
     this.gymnastService.getGymnastById(this.gymnastId).subscribe(snap => {
       this.gymnast = snap;
       console.log(snap);
+      console.log(this.gymnastId);
     });
   }
 

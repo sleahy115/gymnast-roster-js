@@ -11,6 +11,7 @@ import { GymnastProfileComponent } from './gymnast-profile/gymnast-profile.compo
 import { AdminComponent } from './admin/admin.component';
 import { EditGymnastComponent } from './edit-gymnast/edit-gymnast.component';
 import { AboutComponent } from './about/about.component';
+import { StatusSortPipe } from './status-sort.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     GymnastProfileComponent,
     AdminComponent,
     EditGymnastComponent,
-    AboutComponent
+    AboutComponent,
+    StatusSortPipe
   ],
   imports: [
     BrowserModule,
