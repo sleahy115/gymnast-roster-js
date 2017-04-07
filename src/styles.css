@@ -1,6 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
-#jumbotron {
-  background-color: blue;
-  color: white;
+#heading {
+  margin-top: 25px;
   text-align: center;
+  text-shadow: 1px 1px #264d73;
+}
+
+#well {
+    background-color: rgba(250, 20, 20, 0.9);
+    color: white;
+}
+#select{
+  color: #264d73;
+}
+#gymnastName:hover {
+  text-decoration: underline;
+  color: #264d73;
+}
+
+#jumbotron {
+  background-color: #264d73;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 1.5px 1.5px #FA1414;
+}
+
+#title {
+  color: #264d73;
+  text-shadow: 1.5px 1.5px #c6d9ec;
+}
+
+#click {
+  background-color: #264d73;
+  font-size: 18px;
+  color: white;
+}
+
+#container {
+  padding-top: 50px;
 }

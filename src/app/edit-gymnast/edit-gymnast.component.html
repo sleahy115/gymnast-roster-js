@@ -12,11 +12,32 @@
   <label>Career best score on vault</label>
   <input name="vault" [(ngModel)]="selectedGymnast.careerHighVault" class="form-control">
   <label>Level</label>
-  <input name="level" [(ngModel)]="selectedGymnast.level" class="form-control">
+  <select class="form-control" name="level" [(ngModel)]="selectedGymnast.level">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="1">7</option>
+    <option value="2">8</option>
+    <option value="3">9</option>
+    <option value="1">10</option>
+    <option value="bronze">Bronze</option>
+    <option value="silver">Silver</option>
+    <option value="gold">gold</option>
+    <option value="platinum">Platinum</option>
+    <option value="diamond">Diamond</option>
+    <option value="elite">Elite</option>
+  </select>
   <label>Status</label>
-  <input name="status" [(ngModel)]="selectedGymnast.status" class="form-control">
+  <select name="status" [(ngModel)]="selectedGymnast.status" class="form-control">
+    <option value="active">Active</option>
+    <option value="inactive">inactive</option>
+    <option value="injured">injured</option>
+  </select>
   <label>Events</label>
   <input name="events" [(ngModel)]="selectedGymnast.events" class="form-control">
-  <button (click)="editGymnast()">Edit</button>
+  <button id="click" (click)="editGymnast()">Edit</button>
 </form>
 </div>

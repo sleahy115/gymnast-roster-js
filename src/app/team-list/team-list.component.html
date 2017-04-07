@@ -3,7 +3,7 @@
 </div>
 <div class="well" id="well">
 <h3>Sort by status</h3>
-<select #searchStatus (change)="status = searchStatus.value">
+<select id="select" #searchStatus (change)="status = searchStatus.value">
   <option value="all">all</option>
   <option value="active">Active</option>
   <option value="inactive">inactive</option>
@@ -11,18 +11,18 @@
 </select>
 </div>
 
-<div class="well" *ngFor="let gymnast of gymnasts | statusSort:status">
-  <h3 (click)="goToProfile(gymnast)"> {{gymnast.name}}</h3>
+<div class="well" id="well" *ngFor="let gymnast of gymnasts | statusSort:status">
+  <h3 id="gymnastName"(click)="goToProfile(gymnast)"> {{gymnast.name}}</h3>
   <div *ngIf="currentRoute === '/admin'">
-    <h2>Level:{{gymnast.level}}</h2>
+    <h3>Level:{{gymnast.level}}</h3>
     <h3>Status:{{gymnast.status}}</h3>
     <h3>Events:{{gymnast.events}}</h3>
     <h3>Career high score on beam:{{gymnast.careerHighBeam}}</h3>
     <h3>Career high score on bars:{{gymnast.careerHighBars}}</h3>
     <h3>Career high score on floor:{{gymnast.careerHighFloor}}</h3>
     <h3>Career high score on vault:{{gymnast.careerHighVault}}</h3>
-    <button (click)="selectGymnast(gymnast)">Edit</button>
-    <button (click)="delete(gymnast)">Delete</button>
+    <button id="click" (click)="selectGymnast(gymnast)">Edit</button>
+    <button id="click" (click)="delete(gymnast)">Delete</button>
   </div>
 </div>
 

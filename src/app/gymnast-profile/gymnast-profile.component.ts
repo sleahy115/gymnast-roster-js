@@ -19,12 +19,9 @@ export class GymnastProfileComponent implements OnInit {
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
       this.gymnastId = urlParameters['id'];
-      console.log(this.gymnastId);
     });
     this.gymnastService.getGymnastById(this.gymnastId).subscribe(snap => {
       this.gymnast = snap;
-      console.log(snap);
-      console.log(this.gymnastId);
     });
   }
 
