@@ -24,8 +24,8 @@ export class TeamListComponent implements OnInit {
     });
   }
 
-  goToProfile(clickedGymnast:Gymnast) {
-    this.router.navigate(['gymnasts', clickedGymnast.id]);
-  }
+  goToProfile(clickedGymnast) {
+    this.router.navigate(['gymnasts', clickedGymnast.$key]);
+  };
 
 }

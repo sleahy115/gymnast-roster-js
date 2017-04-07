@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-// import { Gymnast } from './gymnast.model';
+import { Gymnast } from './gymnast.model';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Injectable()
@@ -13,6 +13,11 @@ export class GymnastService {
 
   getGymnasts() {
     return this.gymnasts;
+  }
+
+  getGymnastById(key) {
+    console.log(this.angularFire.database.object('gymnasts/'+key));
+    return this.angularFire.database.object('gymnasts/'+ key);
   }
 
 }
