@@ -1,0 +1,24 @@
+<h2>Add new gymnast to roster</h2>
+
+<form>
+  <label for="name">Name</label>
+  <input #newName>
+  <label for="career-high-bars">Career best score on bars</label>
+  <input #newBars>
+  <label for="career-high-beam">Career best score on beam</label>
+  <input #newBeam>
+  <label for="career-high-floor">Career best score on floor</label>
+  <input #newFloor>
+  <label for="career-high-vault">Career best score on vault</label>
+  <input #newVault>
+  <label for="level">Level</label>
+  <input #newLevel>
+  <label for="status">Status</label>
+  <input #newStatus>
+  <label for="events">Events</label>
+  <input #newEvents>
+
+      <button (click)="submitNewGymnast(newName.value, newBars.value, newBeam.value, newFloor.value, newVault.value, newLevel.value, newStatus.value, newEvents.value)">Add</button>
+</form>
+
+<!-- newName.value='',newBars.value='',newBeam.value='',newFloor.value='',newVault.value='',newLevel.value='',newStatus.value='' -->

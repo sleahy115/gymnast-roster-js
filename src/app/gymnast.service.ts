@@ -20,4 +20,8 @@ export class GymnastService {
     return this.angularFire.database.object('gymnasts/'+ key);
   }
 
+  addGymnast(newGymnast:Gymnast){
+    this.gymnasts.push(newGymnast);
+  }
+
 }
