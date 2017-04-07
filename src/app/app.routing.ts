@@ -8,10 +8,10 @@ const appRoutes: Routes = [
   {
     path: '',
     component: TeamListComponent
-  }, {
+  },{
     path: 'gymnasts/:id',
     component: GymnastProfileComponent
-  } , {
+  },{
       path: 'admin',
       component: AdminComponent
     }

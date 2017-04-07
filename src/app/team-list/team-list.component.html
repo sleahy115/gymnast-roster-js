@@ -1,4 +1,16 @@
-<p>
-  team-list works!
-</p>
-<li *ngFor="let gymnast of gymnasts" (click)="goToProfile(gymnast)"> {{gymnast.name}}</li>
+<div *ngFor="let gymnast of gymnasts">
+  <li (click)="goToProfile(gymnast)"> {{gymnast.name}}</li>
+  <div *ngIf="currentRoute === '/admin'">
+    {{gymnast.name}}
+    {{gymnast.level}}
+    {{gymnast.status}}
+    {{gymnast.events}}
+    {{gymnast.careerHighBeam}}
+    {{gymnast.careerHighBars}}
+    {{gymnast.careerHighFloor}}
+    {{gymnast.careerHighVault}}
+    <button (click)="selectGymnast(gymnast)">Edit</button>
+  </div>
+</div>
+
+<app-edit-gymnast [selectedGymnast]="selectedGymnast" (editGymnastSender)="editGymnast($event)"></app-edit-gymnast>

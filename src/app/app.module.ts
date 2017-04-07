@@ -9,6 +9,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { GymnastProfileComponent } from './gymnast-profile/gymnast-profile.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditGymnastComponent } from './edit-gymnast/edit-gymnast.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,7 +23,8 @@ export const firebaseConfig = {
     AppComponent,
     TeamListComponent,
     GymnastProfileComponent,
-    AdminComponent
+    AdminComponent,
+    EditGymnastComponent
   ],
   imports: [
     BrowserModule,

@@ -24,4 +24,9 @@ export class GymnastService {
     this.gymnasts.push(newGymnast);
   }
 
+  editGymnast(gymnast) {
+    var entry = this.getGymnastById(gymnast.$key);
+    entry.update(gymnast);
+  }
+
 }

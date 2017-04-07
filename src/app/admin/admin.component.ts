@@ -12,6 +12,7 @@ import { Gymnast } from '../gymnast.model';
 export class AdminComponent implements OnInit {
 
   constructor(private gymnastService:GymnastService) { }
+  selectedGymnast = null;
 
   ngOnInit() {
   }
@@ -19,6 +20,11 @@ export class AdminComponent implements OnInit {
   submitNewGymnast(name:string, level:any, events:string, careerHighBeam:number, careerHighBars:number,careerHighFloor:number, careerHighVault:number, status:string) {
     var newGymnast: Gymnast = new Gymnast(name, level, events, careerHighBeam, careerHighBars,careerHighFloor, careerHighVault, status);
     this.gymnastService.addGymnast(newGymnast);
+  }
+
+  editGymnast(gymnast){
+    console.log("admin.ts" + this.selectedGymnast)
+    this.selectedGymnast = gymnast;
   }
 
 }

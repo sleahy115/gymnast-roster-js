@@ -1,0 +1,20 @@
+<form *ngIf="selectedGymnast">
+  <h2>Edit Gymnast</h2>
+  <label>Name</label>
+  <input name="name" [(ngModel)]="selectedGymnast.name">
+  <label>Career best score on bars</label>
+  <input name="bars" [(ngModel)]="selectedGymnast.careerHighBars">
+  <label>Career best score on beam</label>
+  <input name="beam" [(ngModel)]="selectedGymnast.careerHighBeam">
+  <label>Career best score on floor</label>
+  <input name="floor" [(ngModel)]="selectedGymnast.careerHighFloor">
+  <label>Career best score on vault</label>
+  <input name="vault" [(ngModel)]="selectedGymnast.careerHighVault">
+  <label>Level</label>
+  <input name="level" [(ngModel)]="selectedGymnast.level">
+  <label>Status</label>
+  <input name="status" [(ngModel)]="selectedGymnast.status">
+  <label>Events</label>
+  <input name="events" [(ngModel)]="selectedGymnast.events">
+  <button (click)="editGymnast()">Edit</button>
+</form>

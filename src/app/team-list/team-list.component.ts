@@ -14,7 +14,8 @@ import { Gymnast } from '../gymnast.model';
 
 export class TeamListComponent implements OnInit {
   gymnasts;
-
+  currentRoute:string = this.router.url;
+  selectedGymnast = false;
 
   constructor(private router:Router, private GymnastService:GymnastService) { }
 
@@ -27,5 +28,14 @@ export class TeamListComponent implements OnInit {
   goToProfile(clickedGymnast) {
     this.router.navigate(['gymnasts', clickedGymnast.$key]);
   };
+
+  selectGymnast(gymnast){
+    console.log(gymnast);
+    this.selectedGymnast = gymnast;
+  }
+
+  editGymnast(gymnast){
+    this.GymnastService.editGymnast(gymnast);
+  }
 
 }
