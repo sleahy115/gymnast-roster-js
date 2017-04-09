@@ -26,7 +26,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       storageBucket: "xxxx.appspot.com",
       messagingSenderId: "xxxx"
     };`
-    * add the api-keys file to the gitignore file. 
+    * add the api-keys file to the gitignore file.
 
 ## Development server
 
@@ -85,6 +85,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 11. Create about route.
 12. Create about component.
 
+## Technologies used
+* Angular 2 CLI -https://cli.angular.io/
+* Bootstrap -http://getbootstrap.com/
+* Firebase -https://firebase.google.com/
+* Node JS -https://nodejs.org/en/
 
 ## Further help
 
